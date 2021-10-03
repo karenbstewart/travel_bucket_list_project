@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for city in cities %}
+<div class="list">
+    <div class="content">
+        <p><a>{{city.country.country_name}}</a></p>
+        <p>{{city.city_name}}</p>
+    </div>
+
+</div>
+
+{% endfor %}
+{% endblock %}
