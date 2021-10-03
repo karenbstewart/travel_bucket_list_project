@@ -14,4 +14,9 @@ def list():
 
 
 
+@cities_blueprint.route("/list/<id>/delete", methods=['POST'])
+def delete_city(id):
+    city_repository.delete(id)
+    return redirect("/list")
+
 

@@ -6,10 +6,16 @@
 <div class="list">
     <div class="content">
         <p><a>{{city.country.country_name}}</a></p>
-        <p>{{city.city_name}}</p>
+        {% for city in cities %}
+        <div class="city_list">
+            <p>{{city.city_name}}</p>
+        </div>
+        {% endfor %}
     </div>
-
+    <form class="delete-form" action="/list/{{city.id}}/delete" method="POST">
+        <button class="trash-button">Delete City</button>
+    </form>
 </div>
-
 {% endfor %}
+
 {% endblock %}
