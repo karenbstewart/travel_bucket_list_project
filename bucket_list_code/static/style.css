@@ -1,6 +1,14 @@
 body{
     font-family: "Helvetica", arial, sans-serif; font-size: 16px;
 }
+.container{
+    width: 70%;
+    margin:auto;
+}
+.blue_text{
+    color:#6686f9;
+    font-size: 35px;
+}
 
 #main_message{
     font-size: 30px;
@@ -28,9 +36,45 @@ body{
     background-color: #404040;
 }
   
-  .menu li{
+.menu li{
     padding-right: 10px;
     list-style: none;
     color: #ffffff;
     font-family: "Helvetica", arial, sans-serif; font-size: 14px;
-  }
+}
+
+.header{
+    text-align: center;
+}
+
+.new_form{
+    display:flex;
+    flex-direction: column;
+    
+}
+.new_form div{
+    padding:10px;
+    width:80%;
+    margin:auto;
+}
+.form_container{
+    display:flex;
+    justify-content: space-evenly;
+}
+.form_container label{
+    padding:4px;
+}
+
+#country_name{
+    width:60%;
+    margin-left:10px;
+    padding:4px;
+}
+
+.button{
+    display: flex;
+    justify-content: center; 
+}
+
+
+

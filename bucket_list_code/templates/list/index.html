@@ -8,7 +8,12 @@
         <h3>{{country.country_name}}</h3>
         {% for city in cities %}
         {% if city.country.id == country.id %}
-        <p>{{city.city_name}}</p>
+        <p>{{city.city_name}}:
+        {% if city.visited == True %}
+            <span> visited: &#9989; </span>
+            {% else %}
+            <span> visited: &#10060; </span>
+            {% endif %}</p>
         <form class="delete-city" action="/list/{{city.id}}/delete" method="POST">
             <button>delete city entry</button>
         </form>

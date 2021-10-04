@@ -2,9 +2,9 @@
 
 {% block content %}
 
-<h1>Add a new location to the wish list here:</h1>
+<h2 class="header">Add a new location to the wish list here:</h2>
 
-<form action="/list/new" method="post">
+<form action="/list/new" method="post" class="new_form">
     <div>
         <label for="city_name">city name</label>
         <input type="text" id="city_name" name="city_name" placeholder="enter city here ..." required>
@@ -25,7 +25,10 @@
         <input type="checkbox" id="visited" name="visited">
     </div>
 
-    <button type="submit">Add a location to list</button>
+    <div>
+        <button type="submit">Add a location to list</button>
+    </div>
+    
 
 </form>
 
