@@ -2,19 +2,19 @@
 
 {% block content %}
 
-{% for city in cities %}
+{% for country in countries %}
 <div class="list">
     <div class="content">
-        <p><a>{{city.country.country_name}}</a></p>
+        <h3>{{country.country_name}}</h3>
         {% for city in cities %}
-        <div class="city_list">
-            <p>{{city.city_name}}</p>
-        </div>
-        {% endfor %}
+        {% if city.country.id == country.id %}
+        <p>{{city.city_name}}</p>
+        <form class="delete-city" action="/list/{{city.id}}/delete" method="POST">
+            <button>delete city entry</button>
+        </form>
+        {% endif %}
+        {% endfor %} 
     </div>
-    <form class="delete-form" action="/list/{{city.id}}/delete" method="POST">
-        <button class="trash-button">Delete City</button>
-    </form>
 </div>
 {% endfor %}
 
