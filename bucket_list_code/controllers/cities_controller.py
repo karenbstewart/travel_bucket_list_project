@@ -34,7 +34,7 @@ def create_city():
         visited = False
 
     if country_id == "other":
-        return redirect('/list')
+        return redirect('/country/new')
     else:
         country = country_repository.select(country_id)
         city = City(city_name, visited, country)

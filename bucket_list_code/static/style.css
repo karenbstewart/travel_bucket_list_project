@@ -1,0 +1,36 @@
+body{
+    font-family: "Helvetica", arial, sans-serif; font-size: 16px;
+}
+
+#main_message{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 15%;
+}
+
+.menu{
+    display: flex;
+    padding: 10px;
+    background-color: #707070;
+    color: #ffffff;
+}
+  
+.menu li a{
+    text-decoration: none;
+    padding:8px;
+    color: #ffffff;
+}
+  
+.menu li a:visited{
+    color: #ffffff;
+}
+.menu li a:hover{
+    background-color: #404040;
+}
+  
+  .menu li{
+    padding-right: 10px;
+    list-style: none;
+    color: #ffffff;
+    font-family: "Helvetica", arial, sans-serif; font-size: 14px;
+  }

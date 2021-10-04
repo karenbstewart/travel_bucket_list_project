@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Add a new country here</h2>
+
+<form action="/country/new" method="post">
+    <div>
+        <label for="country_name">Add new country</label>
+        <input type="text" id="country_name" name="country_name" placeholder="Add name of country here ..." required>
+    </div>
+    <button type="submit">Add a new country</button>
+</form>
+
+
+
+{% endblock %}
+
+
+
