@@ -41,9 +41,20 @@ def create_city():
         city_repository.save(city)
         return redirect('/list')
     
-    
+@cities_blueprint.route("/list/<id>/edit", methods=['GET']) 
+def edit_city(id):
+    city = city_repository.select(id)
+    country = country_repository.select(city.country.id)
+    return render_template('list/edit.html', city = city, country = country)
 
-
-
+@cities_blueprint.route("/list/<id>", methods=["POST"])
+def undate_city(id):
+    city_name = request.form['city_name']
+    visited = request.form['visited']
+    country_id = request.form['country_id']
+    country = country_repository.select(country_id)
+    city = City(city_name, visited, country, id)
+    city_repository.update(city)
+    return redirect('/list')
 
 

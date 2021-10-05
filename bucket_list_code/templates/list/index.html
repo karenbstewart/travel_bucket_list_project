@@ -2,10 +2,12 @@
 
 {% block content %}
 
+<h2>Your location wish list:</h2>
 {% for country in countries %}
 <div class="list">
     <div class="content">
         <h3>{{country.country_name}}</h3>
+        <p class="cities-in-country">
         {% for city in cities %}
         {% if city.country.id == country.id %}
         <p>{{city.city_name}}:
@@ -14,9 +16,14 @@
             {% else %}
             <span> visited: &#10060; </span>
             {% endif %}</p>
+        
         <form class="delete-city" action="/list/{{city.id}}/delete" method="POST">
             <button>delete city entry</button>
         </form>
+        <form class="edit-city" action="/list/{{city.id}}/edit" >
+            <button>edit city entry</button>
+        </form>
+    </p>
         {% endif %}
         {% endfor %} 
     </div>
