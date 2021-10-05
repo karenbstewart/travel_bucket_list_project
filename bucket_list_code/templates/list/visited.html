@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Locations visited:</h2>
+{% for country in countries %}
+<div class="list">
+    <div class="content">
+        <h3>{{country.country_name}}</h3>
+        {% for city in cities %}
+        {% if city.country.id == country.id %}
+            {% if city.visited == True %}
+                {{city.city_name}}:
+
+            {% endif %}
+        {% endif %}
+        {% endfor %}
+            
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}

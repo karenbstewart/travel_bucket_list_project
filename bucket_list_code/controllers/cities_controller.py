@@ -61,4 +61,13 @@ def update_city(id):
     city_repository.update(city)
     return redirect('/list')
 
+@cities_blueprint.route('/list/visited')
+def visited_locations():    
+    cities = city_repository.select_all()
+    countries = country_repository.select_all()
+    return render_template("list/visited.html", cities = cities, countries = countries )
+
+
+
+
 
