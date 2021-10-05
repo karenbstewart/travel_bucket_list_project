@@ -1,3 +1,9 @@
+*{
+    margin:0;
+
+}
+
+
 body{
     font-family: "Helvetica", arial, sans-serif; font-size: 16px;
     background-color: black;
@@ -5,12 +11,14 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     margin:0;
+    padding:0;
 }
 .container{
     width: 70%;
     margin:auto;
-    background-color: white;
-    opacity:0.6;
+    /* background-color: white;
+    opacity:0.6; */
+    padding:0;
 }
 .blue_text{
     color:#3693a5;
@@ -33,15 +41,15 @@ body{
 
 .menu{
     display: flex;
-    padding: 10px;
-    background-color: #707070;
+    padding: 25px;
+    background-color: #000000;
     color: #ffffff;
     
 }
   
 .menu li a{
     text-decoration: none;
-    padding:8px;
+    padding:20px;
     color: #ffffff;
 }
   
@@ -73,10 +81,7 @@ body{
     width:80%;
     margin:auto;
 }
-.form_container{
-    display:flex;
-    justify-content: space-evenly;
-}
+
 .form_container label{
     padding:4px;
 }
@@ -95,15 +100,57 @@ body{
 .content{
     display:flex;
     flex-direction: column;
-}
-
-.cities-in-country{
-    display:flex;
-    flex-direction: row;
+    margin:auto;
+    justify-content: start;
+    padding: 2% 30% 2% 30%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid white;
     
 }
 
+form.delete-city{ 
+   
+}
+.cities-in-country{
+    display: flex;
+    flex-direction: column;
+     
+}
+.content.cities-in-country{
+    margin-left: 100px;
+}
+.content{
+    color: #ffffff;
+}
 
+span{
+   margin-left: 200px;
+}
 
+.delete-city{
+    margin-left: 200px;
+}
+.button {
+    padding: 6px 4px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    border-radius: 15px;
+    font-size: 15px;
+    color:#000000;
+    opacity: 1;
+    margin: 1px;
+}
 
+.edit-city{
+    margin-left: 200px;
+}
 
+.container h2 {
+    color:white;
+    padding:20px;
+    text-align: center;
+}
+
+.content div{
+    padding:10px;
+}

@@ -45,13 +45,17 @@ def create_city():
 def edit_city(id):
     city = city_repository.select(id)
     country = country_repository.select(city.country.id)
-    return render_template('list/edit.html', city = city, country = country)
+    countries = country_repository.select_all()
+    return render_template('list/edit.html', city = city, country = country, countries = countries)
 
 @cities_blueprint.route("/list/<id>", methods=["POST"])
-def undate_city(id):
+def update_city(id):
     city_name = request.form['city_name']
-    visited = request.form['visited']
     country_id = request.form['country_id']
+    if "visited" in request.form:
+        visited = True
+    else:
+        visited = False
     country = country_repository.select(country_id)
     city = City(city_name, visited, country, id)
     city_repository.update(city)
