@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<h2>Locations visited:</h2>
+<h2>Locations not visited....YET:</h2>
 {% for country in countries %}
 <div class="list">
     <div class="content">
@@ -10,7 +10,7 @@
         {% for city in cities %}
         {% if city.country.id == country.id %}
         
-            {% if city.visited == True %}
+            {% if city.visited == False %}
             
                 {{city.city_name}}:
 

@@ -67,6 +67,12 @@ def visited_locations():
     countries = country_repository.select_all()
     return render_template("list/visited.html", cities = cities, countries = countries )
 
+@cities_blueprint.route('/list/not_visited')
+def not_visited_locations():    
+    cities = city_repository.select_all()
+    countries = country_repository.select_all()
+    return render_template("list/not_visited.html", cities = cities, countries = countries )
+
 
 
 
