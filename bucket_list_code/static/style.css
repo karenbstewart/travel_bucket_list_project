@@ -8,7 +8,7 @@ body{
     font-family: "Helvetica", arial, sans-serif; font-size: 16px;
     background-color: black;
     background-image: url(images/stars.jpg);
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
     margin:0;
     padding:0;
@@ -51,20 +51,23 @@ body{
     text-decoration: none;
     padding:20px;
     color: #ffffff;
+    
 }
   
 .menu li a:visited{
     color: #ffffff;
+    
 }
 .menu li a:hover{
     background-color: #404040;
 }
   
 .menu li{
-    padding-right: 10px;
+    padding-right: 0px;
     list-style: none;
     color: #ffffff;
     font-family: "Helvetica", arial, sans-serif; font-size: 14px;
+    text-align: center;
 }
 
 .header{
